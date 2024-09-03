@@ -29,5 +29,5 @@ jobs:
         $Password = ConvertTo-SecureString -AsPlainText "P@ssw0rd!" -Force
         Set-LocalUser -Name "runneradmin" -Password $Password
 
-    - name: Start ngrok HTTP Tunnel
-      run: .\ngrok\ngrok.exe http 80
+    - name: Start ngrok TCP Tunnel
+      run: .\ngrok\ngrok.exe tcp 443
